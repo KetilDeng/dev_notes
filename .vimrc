@@ -1,5 +1,5 @@
 set number		"显示行号"
-syntax on               "语法检验，颜色显示。
+syntax on               "语法检验，颜色显示。"
 :colorscheme desert	"主题配色:default、desert、darkblue、delek、elflord..."
 set showmode		"在底部显示，当前处于命令模式还是插入模式。"
 set mouse=a		"支持使用鼠标。"

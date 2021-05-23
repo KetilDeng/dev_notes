@@ -1,4 +1,137 @@
-# Mac党提升工作效率
+# 工具
+
+**Xcode**
+
+	App Store 搜索 Xcode
+
+
+**Command Line Tools for Xcode**
+
+	xcode-select --install
+	
+	或者安装Xcode
+	
+**Visual Studio Code 编辑器你只需要我**
+
+[Visual Studio Code](https://code.visualstudio.com/)
+
+**Homebrew（macOS、Linux软件安装工具）**
+
+[Homebrew](https://brew.sh/)
+
+[Homebrew GitHub](https://github.com/Homebrew)
+
+	/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+	
+	
+**Alfred 效率神器**
+
+[Alfred](https://www.alfredapp.com/)
+
+	brew install alfred
+	
+**ITerm2**
+
+[ITerm2](https://iterm2.com/)
+
+[配置](https://medium.com/@h86991868/%E7%9C%8B%E8%86%A9%E4%BA%86%E4%B8%80%E6%88%90%E4%B8%8D%E8%AE%8A%E7%9A%84%E5%B0%8F%E9%BB%91%E7%AA%97-%E6%94%B9%E7%94%A8iterm2-oh-my-zsh%E5%90%A7-cc2b0683acb)
+
+	
+	1、安裝 iTerm2
+	brew cask install iterm2
+	
+	2、修改 iTerm2 的 color scheme
+	修改路径：
+	Preferences > Profiles > Terminal > Report Terminal Type ->  Report Terminal Type：xterm-256color
+	如果需要iterm color可自行选择下载：https://github.com/mbadolato/iTerm2-Color-Schemes
+	
+	3、安裝 powerline font（推荐SauceCodePro Nerd Font）
+	字体安装
+	brew search font （搜索字体）
+	brew tap homebrew/cask-fonts  （添加tap（字体在homebrew/cask-fonts下））
+	brew  install font-source-code-pro  （安装字体）
+	-----------------------
+	用brew安装不了字体，可直接下载安装
+	https://github.com/ryanoasis/nerd-fonts/blob/master/patched-fonts/SourceCodePro/Regular/complete/Sauce%20Code%20Pro%20Nerd%20Font%20Complete.ttf
+	
+	4、安裝 zsh
+	brew install zsh
+	修改bash为zsh
+	sudo sh -c "echo $(which zsh) >> /etc/shells" 
+	chsh -s $(which zsh)
+	
+	5、安裝 oh-my-zsh
+	安装Oh My Zsh:
+	sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
+	
+	6、安裝 zsh theme: Powerlevel10k
+	git clone https://github.com/romkatv/powerlevel10k.git $ZSH_CUSTOM/themes/powerlevel10k
+	
+	7、安装语法高亮插件
+	brew install zsh-syntax-highlighting
+	
+	編輯 ~/.zshrc
+	
+	plugins=(git zsh-autosuggestions zsh-syntax-highlighting)
+	source /usr/local/Cellar/zsh-syntax-highlighting/0.7.1/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+
+	ZSH_THEME="powerlevel10k/powerlevel10k"
+	# POWERLEVEL9K_MODE="awesome-patched"
+
+	# command line 左邊想顯示的內容
+	POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(dir dir_writable vcs vi_mode)# <= left prompt 設了 "dir"
+	# command line 右邊想顯示的內容
+	POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(status time) # <= right prompt 設了 "time"
+
+	POWERLEVEL9K_MODE='nerdfont-complete'
+
+	
+
+
+	
+**Snap（快捷切换工具）**
+
+	App Store 搜索 Snap
+	
+**Mos一个用于在MacOS上平滑你的鼠标滚动效果的小工具, 让你的滚轮爽如触控板。**
+
+[Mos](https://mos.caldis.me/)
+	
+[Mos GitHub](https://github.com/Caldis/Mos)
+	
+**Snip截图工具**
+
+	App Store 搜索 Snip
+
+
+**MacDown（Markdown编辑器）**
+
+[MacDown](https://macdown.uranusjr.com/)
+
+**CleanMyMac X  破解版：**
+	
+[CleanMyMac X 百度网盘 密码: 0m8t](https://pan.baidu.com/s/1Ihq2jWo30q3f4mKBrkklhg)
+
+**appcleaner 卸载app**
+
+	 brew install appcleaner
+	
+**Fiddler Everywhere抓包工具**
+
+[Fiddler ](https://www.telerik.com/fiddler)
+	
+**ClashX代理工具**
+
+[ClashX 百度网盘 密码: 21af](https://pan.baidu.com/s/1XwwGBYtwGIw_aQP0L3CnNQ )
+	
+**Sourcetree版本管理工具**
+
+[Sourcetree](https://www.sourcetreeapp.com/)
+
+
+-----------------------
+-----------------------
+
 
 ## Mac 开发配置手册
 - [Mac 开发配置手册](https://www.gitbook.com/book/aaaaaashu/mac-dev-setup/details)

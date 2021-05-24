@@ -38,52 +38,50 @@
 
 	
 	1、安裝 iTerm2
-	brew cask install iterm2
+		brew cask install iterm2
 	
-	2、修改 iTerm2 的 color scheme
-	修改路径：
-	Preferences > Profiles > Terminal > Report Terminal Type ->  Report Terminal Type：xterm-256color
-	如果需要iterm color可自行选择下载：https://github.com/mbadolato/iTerm2-Color-Schemes
+	2、安裝 zsh
+		brew install zsh
+		修改bash为zsh
+		sudo sh -c "echo $(which zsh) >> /etc/shells" 
+		chsh -s $(which zsh)
+		
+	3、安裝 oh-my-zsh
+		sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
+		
+	4、安裝 zsh theme: Powerlevel10k
+		git clone https://github.com/romkatv/powerlevel10k.git $ZSH_CUSTOM/themes/powerlevel10k
+		
+	5、安装语法高亮插件
+		brew install zsh-syntax-highlighting
+		or
+		cd ~/.oh-my-zsh/custom/plugins/
+		git clone https://github.com/zsh-users/zsh-syntax-highlighting.git
 	
-	3、安裝 powerline font（推荐SauceCodePro Nerd Font）
-	字体安装
-	brew search font （搜索字体）
-	brew tap homebrew/cask-fonts  （添加tap（字体在homebrew/cask-fonts下））
-	brew  install font-source-code-pro  （安装字体）
-	-----------------------
-	用brew安装不了字体，可直接下载安装
-	https://github.com/ryanoasis/nerd-fonts/blob/master/patched-fonts/SourceCodePro/Regular/complete/Sauce%20Code%20Pro%20Nerd%20Font%20Complete.ttf
+	6、安装命令补全插件
+		brew install zsh-autosuggestions
+		or
+		cd ~/.oh-my-zsh/custom/plugins/
+		git clone https://github.com/zsh-users/zsh-autosuggestions
 	
-	4、安裝 zsh
-	brew install zsh
-	修改bash为zsh
-	sudo sh -c "echo $(which zsh) >> /etc/shells" 
-	chsh -s $(which zsh)
+	6、安裝字体 SauceCodePro Nerd Font
+		https://github.com/ryanoasis/nerd-fonts/blob/master/patched-fonts/SourceCodePro/Regular/complete/Sauce%20Code%20Pro%20Nerd%20Font%20Complete.ttf
 	
-	5、安裝 oh-my-zsh
-	安装Oh My Zsh:
-	sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
-	
-	6、安裝 zsh theme: Powerlevel10k
-	git clone https://github.com/romkatv/powerlevel10k.git $ZSH_CUSTOM/themes/powerlevel10k
-	
-	7、安装语法高亮插件
-	brew install zsh-syntax-highlighting
-	
+	7、字体、字体颜色、大小、补全字体颜色、配色....进设置修改
+
 	編輯 ~/.zshrc
+		# zsh-syntax-highlighting 必须放在最后
+		plugins=(git zsh-autosuggestions zsh-syntax-highlighting)
+		source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+		ssource /usr/local/share/zsh-autosuggestions/zsh-autosuggestions.zsh	
+		ZSH_THEME="powerlevel10k/powerlevel10k"
 	
-	plugins=(git zsh-autosuggestions zsh-syntax-highlighting)
-	source /usr/local/Cellar/zsh-syntax-highlighting/0.7.1/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
-
-	ZSH_THEME="powerlevel10k/powerlevel10k"
-	# POWERLEVEL9K_MODE="awesome-patched"
-
-	# command line 左邊想顯示的內容
-	POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(dir dir_writable vcs vi_mode)# <= left prompt 設了 "dir"
-	# command line 右邊想顯示的內容
-	POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(status time) # <= right prompt 設了 "time"
-
-	POWERLEVEL9K_MODE='nerdfont-complete'
+		# command line 左邊想顯示的內容
+		POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(dir dir_writable vcs vi_mode)# <= left prompt 設了 "dir"
+		# command line 右邊想顯示的內容
+		POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(status time) # <= right prompt 設了 "time"
+	
+		POWERLEVEL9K_MODE='nerdfont-complete'
 
 	
 

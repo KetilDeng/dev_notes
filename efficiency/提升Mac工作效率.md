@@ -30,6 +30,13 @@
 
 	brew install alfred
 	
+	文件、文件夹等搜索不到的解决方法
+	依次执行如下命令：
+	sudo mdutil -i off /（该命令用来关闭索引）
+	sudo mdutil -E /（该命令用来删除索引）
+	sudo mdutil -i on /（该命令用来重建索引）
+	然后重启电脑后再运行聚焦搜索即可。
+	
 **ITerm2**
 
 [ITerm2](https://iterm2.com/)

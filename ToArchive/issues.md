@@ -13,3 +13,11 @@
 	
 	plugins_path = File.join(File.dirname(__FILE__), 'fastlane', 'Pluginfile')
 	eval_gemfile(plugins_path) if File.exist?(plugins_path)
+	
+	
+	
+# zsh
+[关于zsh启动时自动source ~/.zshrc](https://blog.csdn.net/Faiz5z/article/details/80986460)
+	
+	
+	在~/.zprofile 添加 source ~/.zshrc

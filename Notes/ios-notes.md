@@ -1,37 +1,53 @@
-# ios-notes
+# ios工程化
 
-统一环境：
+统一开发环境：
 
-	rbenv
-	Bundler
-	RubyGems
-	fastlane
-	CocoaPods
+	macOS（系统）
+	↓
+	rbenv（管理Ruby）	Xcode（IDE）
+	↓
+	Bundler、RubyGems（管理 CocoaPods 和 fastlane）
+	↓
+	CocoaPods	fastlane
 	
-rbenv:
-	
-	$ /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
+[CocoaPods](https://cocoapods.org/)
 
+[fastlane](https://docs.fastlane.tools/)
+	
+[rbenv](https://github.com/rbenv/rbenv)
+	
+	安装：
 	brew install rbenv ruby-build rbenv-vars
 	
+	
+	配置：
 	~/.zshrc:
 	export PATH="$HOME/.rbenv/bin:$PATH" 
-
 	eval "$(rbenv init -)"
 	
 	安装和设置项目的 Ruby 环境
 	$ cd $(PROJECT_DIR)
-
 	$ rbenv install 2.7.1
-
 	$ rbenv local 2.7.1
+	
+	常用命令：
+	rbenv -v						# 查看rbenv版本
+	rbenv install --list  			# 列出所有 ruby 版本
+	rbenv install 2.7.1				# 安装 2.7.1 ruby
+	rbenv versions               		# 列出安装的版本
+	rbenv version               		# 列出正在使用的版本
 
-RubyGems 和 Bundler:
+[RubyGems](https://rubygems.org/?locale=zh-CN) 
 
+[Bundler](https://bundler.io/)
+
+	安装Bundler：
 	gem install bundler
 	
-	bundle init就可以生成一个 Gemfile 文件，像 CocoaPods 和 fastlane 等依赖包，我们就可以添加到这个文件里面：
+	生成Gemfile：
+	bundle init 
 	
+	Gemfile文件添加依赖包：
 	source "https://rubygems.org"
 	gem "cocoapods", "1.10.0"
 	gem "fastlane", "2.166.0"

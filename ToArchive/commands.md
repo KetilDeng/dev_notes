@@ -1,11 +1,12 @@
 
 - A重命名为B：mv A B
+
 - 脚本赋执行权限: chmod u+x xxx.sh  
 		
 		u代表所有者。+表示增加权限。x代表执行权限。
 		
 		或者直接使用sh运行（sh xxx.sh）这中情况下不需要赋值权限
-- curl与wget
+
 - 脚本执行方法：
 
 
@@ -22,3 +23,15 @@
 		方法四：使用source执行（这种方式会在当前shell中执行，前面三种都会开启一个子shell环境执行，执行完立即回到父shell）
 		部分命令需要在当前shell环境中使用 例如：cd
 		source hello.sh
+		
+
+
+- 查看电池状态
+		
+		ioreg -rn AppleSmartBattery | grep -i capacity
+		
+- curl与wget
+- git config -l 查看当前git配置
+
+		挑选某几个提交到当前分支
+		git cherry-pick <commitHashA> <commitHashB>

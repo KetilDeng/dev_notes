@@ -22,3 +22,19 @@
 		方法四：使用source执行（这种方式会在当前shell中执行，前面三种都会开启一个子shell环境执行，执行完立即回到父shell）
 		部分命令需要在当前shell环境中使用 例如：cd
 		source hello.sh
+		
+		
+		
+traceroute www.baidu.com
+
+netstat
+
+netstat -nat|grep 80
+
+lsof
+
+lsof -i:80
+
+kill 12094
+
+killall Google

@@ -25,7 +25,7 @@
 		方法四：使用source执行（这种方式会在当前shell中执行，前面三种都会开启一个子shell环境执行，执行完立即回到父shell）
 		部分命令需要在当前shell环境中使用 例如：cd
 		source hello.sh
-		
+				
 
 - 查看电池状态
 
@@ -64,3 +64,20 @@
 		gem which cocoapods
 		 
 - curl与wget
+
+- Linux命令
+
+		路由追踪：
+		traceroute www.baidu.com
+		
+		显示网络状态：
+		netstat
+		netstat -nat|grep 80
+		
+		端口查看：
+		lsof
+		lsof -i:80
+		
+		杀进程
+		kill 12094
+		killall Google

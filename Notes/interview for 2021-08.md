@@ -49,14 +49,39 @@
 
 ## iOS
 ##### Swift
-1. Swift中struct和class有什么区别？
-2. Swift中的方法调用有哪些形式？
-3. Swift和OC有什么区别？
-4. Swift的安全性体现在哪里？（为什么说Swift是安全的？）
-5. 从OC向Swift迁移的时候遇到过什么问题？
-6. 说一下写时复制
-7. swift的面向协议的理解
-8. swift中的可变数组 为啥用var来修饰
+<details>
+<summary>Swift中struct和class有什么区别？</summary>
+	struct是值类型，class是引用类型
+</details>
+<details>
+<summary> Swift中的方法调用有哪些形式？ </summary>
+	xxx
+</details>
+<details>
+<summary> Swift和OC有什么区别？ </summary>
+	xxx
+</details>
+<details>
+<summary> Swift的安全性体现在哪里？（为什么说Swift是安全的？） </summary>
+	xxx
+</details>
+<details>
+<summary> 说一下写时复制 </summary>
+	xxx
+</details>
+<details>
+<summary> swift的面向协议的理解 </summary>
+	xxx
+</details>
+<details>
+<summary> swift中的可变数组 为啥用var来修饰 </summary>
+	xxx
+</details>
+<details>
+<summary> 从OC向Swift迁移的时候遇到过什么问题？ </summary>
+	xxx
+</details>
+
 
 ##### 语法
 6. Block是如何实现的？Block对应的数据结构是什么样子的？__block的作用是什么？它对应的数据结构又是什么样子的？
@@ -148,3 +173,12 @@
 56. UIView 生命周期
 57. 如果页面 A 跳转到 页面 B，A 的 viewDidDisappear 方法和 B 的 viewDidAppear 方法哪个先调用？
 58. 哈希表如何处理冲突
+
+## 公司
+#### 富途
+1. 有三个杯子，容量各是10升、7升、3升。把10升的装满水。问：不用别的测量，怎样能将 10 升水分成两个 5 升。
+3. 一个数组有0和非0（eg: [0、1、-1、0、2、5、0] ），把所有的0往前挪动，其它保持相对位置不变。要求时间复杂度O(n）空间复杂度O(1)。
+4. KVO、KVC原理。他们只能针对属性吗？
+5. 什么是野指针，什么情况下会出现
+6. __block、__weak区别
+7. 宏和constant区别和使用场景

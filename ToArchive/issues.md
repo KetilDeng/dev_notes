@@ -21,3 +21,8 @@
 	
 	
 	在~/.zprofile 添加 source ~/.zshrc
+
+# git
+	kex_exchange_identification: read: Connection reset by peer
+	kex_exchange_identification: Connection closed by remote host
+	
